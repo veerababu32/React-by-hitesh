@@ -40,7 +40,7 @@ Links
 
 Images
 ![this is img](https://learncodeonline.in/mascot.png "LCO")
-![Project](hhttps://learncodeonline.in/gitone.png "Project")
+![Project](https://learncodeonline.in/gitone.png "Project")
 ![Coder](https://learncodeonline.in/gittwo.png "Coder")
 
 Use `for` loop
