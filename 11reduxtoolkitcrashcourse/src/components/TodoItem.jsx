@@ -7,8 +7,6 @@ function TodoItem({ todo }) {
   const [todoMsg, setTodoMsg] = useState(todo.todo);
   const dispatch = useDispatch();
 
-  console.log(todo.completed);
-
   const editTodo = () => {
     dispatch(updateTodo({ id: todo.id, todoMsg: todoMsg }));
     setIsTodoEditable(false);

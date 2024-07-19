@@ -1,22 +1,21 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 
+// todos: [
+// {
+//   id: nanoid(),
+//   todoMsg: 'Hey this is todo created by using redux!',
+//   completed: true,
+// },
+// ],
+
 const initialState = {
-  todos: [
-    {
-      id: nanoid(),
-      todoMsg: 'Hey this is todo created by using redux!',
-      completed: true,
-    },
-  ],
+  todos: JSON.parse(localStorage.getItem('todos')) || [],
 };
 
 export const todoSlice = createSlice({
   name: 'todo',
   initialState,
   reducers: {
-    setTodo: (state, action) => {
-      state.todos.push(action.payload);
-    },
     addTodo: (state, action) => {
       const todo = {
         id: nanoid(),
@@ -44,7 +43,7 @@ export const todoSlice = createSlice({
   },
 });
 
-export const { setTodo, addTodo, removeTodo, updateTodo, toggleTodo } =
+export const { addTodo, removeTodo, updateTodo, toggleTodo } =
   todoSlice.actions;
 
 export default todoSlice.reducer;
