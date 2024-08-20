@@ -84,12 +84,12 @@ export class Service {
 
   // storage service
 
-  async createFile() {
+  async createFile(file) {
     try {
       return await this.bucket.createFile(
         conf.appWriteBucketId,
         ID.unique(),
-        File
+        file
       );
     } catch (error) {
       console.log('Appwrite service :: createFile() ::', error);

@@ -23,13 +23,13 @@ function TodoItem({ todo }) {
         type="checkbox"
         className="cursor-pointer"
         checked={todo.completed}
-        onChange={() => toggleTodo(todo.id)}
+        onChange={() => toggleTodo(todo.id, { ...todo, todo: todo.completed })}
       />
       <input
         type="text"
         className={`border outline-none w-full bg-transparent rounded-lg ${
           isTodoEditable ? 'border-black/50 px-2' : 'border-transparent'
-        }`}
+        } ${todo.completed ? 'line-through' : ''}`}
         value={todoMsg}
         onChange={(e) => setTodoMsg(e.target.value)}
         readOnly={!isTodoEditable}

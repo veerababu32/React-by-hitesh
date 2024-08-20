@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  height: calc(100vh - 64px);
+}
+
+.todos-con {
+  height: calc(100vh - 214px);
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
